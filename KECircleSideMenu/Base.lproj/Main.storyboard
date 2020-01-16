@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="KECircleSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-il-Jrm" customClass="KECircleView" customModule="KECircleSideMenu" customModuleProvider="target">
+                                <rect key="frame" x="344" y="50" width="60" height="60"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9WA-ME-fVP">
+                                        <rect key="frame" x="12" y="24.5" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9WA-ME-fVP" secondAttribute="height" multiplier="1:1" id="XFD-Km-sqW"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" id="Bek-6A-xYF">
+                                                <rect key="frame" x="0.0" y="28" width="30" height="61"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bek-6A-xYF" id="QWZ-1X-lO9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-a4-1Wx">
+                                                            <rect key="frame" x="20" y="20" width="0.0" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="BhJ-a4-1Wx" firstAttribute="leading" secondItem="QWZ-1X-lO9" secondAttribute="leading" constant="20" symbolic="YES" id="QmD-uW-fQB"/>
+                                                        <constraint firstItem="BhJ-a4-1Wx" firstAttribute="top" secondItem="QWZ-1X-lO9" secondAttribute="top" constant="20" symbolic="YES" id="ilf-PB-ctD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BhJ-a4-1Wx" secondAttribute="bottom" constant="20" symbolic="YES" id="nGZ-CG-CHh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BhJ-a4-1Wx" secondAttribute="trailing" constant="20" symbolic="YES" id="vlw-v7-p8E"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="aNo-jd-5Dw"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ZN3-Kc-m2i"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9WA-ME-fVP" firstAttribute="centerX" secondItem="9Qw-il-Jrm" secondAttribute="centerX" multiplier="0.9" id="7cY-50-3Qw"/>
+                                    <constraint firstItem="9WA-ME-fVP" firstAttribute="width" secondItem="9Qw-il-Jrm" secondAttribute="height" multiplier="1:2" id="V4R-JG-vA6"/>
+                                    <constraint firstAttribute="bottom" secondItem="9WA-ME-fVP" secondAttribute="bottom" multiplier="1.1" id="hrk-ZG-Qof"/>
+                                    <constraint firstAttribute="height" constant="60" id="kep-Et-0CX"/>
+                                    <constraint firstAttribute="width" constant="60" id="tRZ-Wx-CQ9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3g-yp-rMf" customClass="KECircleButton" customModule="KECircleSideMenu" customModuleProvider="target">
+                                <rect key="frame" x="344" y="50" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BUI-e3-GmG"/>
+                                    <constraint firstAttribute="width" constant="60" id="ziD-Vi-Xu1"/>
+                                </constraints>
+                                <state key="normal" image="ellipsis" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sideMenuClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRZ-hb-I6M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Qw-il-Jrm" firstAttribute="centerY" secondItem="a3g-yp-rMf" secondAttribute="centerY" id="Aon-tc-Rm9"/>
+                            <constraint firstItem="9Qw-il-Jrm" firstAttribute="centerX" secondItem="a3g-yp-rMf" secondAttribute="centerX" id="Vup-Ee-h2I"/>
+                            <constraint firstAttribute="trailing" secondItem="a3g-yp-rMf" secondAttribute="trailing" constant="10" id="fJg-Qy-Bys"/>
+                            <constraint firstItem="a3g-yp-rMf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="jL7-aF-acO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnSideMenu" destination="a3g-yp-rMf" id="qfd-DQ-MJo"/>
+                        <outlet property="constraintHeight" destination="kep-Et-0CX" id="IrY-fJ-kjW"/>
+                        <outlet property="constraintWidth" destination="tRZ-Wx-CQ9" id="hWa-Ye-741"/>
+                        <outlet property="tableView" destination="9WA-ME-fVP" id="wTj-7b-cNr"/>
+                        <outlet property="viewCircle" destination="9Qw-il-Jrm" id="enl-Aw-N17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipsis" catalog="system" width="64" height="18"/>
+    </resources>
+</document>
